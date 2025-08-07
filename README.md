@@ -29,6 +29,17 @@ This is the link that contains example codes about Haarcascade.
 
 ---
 
+⚫ **2. LBPH**
+
+In opencv, the face module was introduced as an extra module, providing three types of face recognizers,  
+one of which is LBPH.  
+LBPHFaceRecognizer recognizes faces using Local Binary Pattern Histogram (LBPH).
+
+OpenCV에서는 엑스트라 모듈로 face 모듈을 추가하고 3가지 얼굴 인식기를 제공하기 시작했는데 LBPH가 그 중에 하나입니다.  
+LBPHFaceRecognizer는 로컬 바이너리 패턴 히스토램으로 얼굴을 인식합니다.
+
+---
+
 ## 📦 Requirements
 
 * Python
