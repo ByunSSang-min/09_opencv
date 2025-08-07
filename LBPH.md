@@ -71,7 +71,7 @@ print("얼굴 샘플 수집이 끝났습니다.")
 
 <br>
 
-![Required](result_screenshot/3_1.jpg)
+![Required](result_screenshot/3.jpg)
 
 2. When the code is executed, input your name(only alphabet) and ID(only number) that you want.
 
