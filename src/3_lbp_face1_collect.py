@@ -4,8 +4,8 @@ import os
 
 # 변수 설정 ---①
 base_dir = '../result_screenshot/faces/'   # 사진 저장할 디렉토리 경로
-target_cnt = 400        # 수집할 사진 갯수
-cnt = 0                 # 사진 촬영 수
+target_cnt = 401        # 수집할 사진 갯수
+cnt = 1                 # 사진 촬영 수
 
 # 얼굴 검출 분류기 생성 --- ②
 face_classifier = cv2.CascadeClassifier(\
@@ -20,6 +20,9 @@ if not os.path.exists(dir):
 
 # 카메라 캡쳐 
 cap = cv2.VideoCapture(1)
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+
 while cap.isOpened():
     ret, frame = cap.read()
     if ret:
@@ -51,4 +54,4 @@ while cap.isOpened():
             break
 cap.release()
 cv2.destroyAllWindows()      
-print("Collecting Samples Completed.")
+print("얼굴 샘플 수집이 끝났습니다.")
