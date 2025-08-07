@@ -19,7 +19,7 @@ machine learning algorithm.
 
 개발자가 직접 머신러닝 학습 알고리즘을 사용하지 않고도 객체를 검출할 수 있도록 OpenCV가 제공하는 대표적인 상위 레벨 API.
 
-<br>
+<br><br>
 
 👉 [Link](Haarcascade.md)
 

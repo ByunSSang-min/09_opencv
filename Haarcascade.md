@@ -35,7 +35,7 @@ cv2.destroyAllWindows()
 
 ---
 
-<br><br>
+<br>
 
 ![Required](result_screenshot/1_1.jpg)
 
@@ -54,5 +54,5 @@ will be detected with green outlines.
 
 ---
 
-<br><br>
+<br>
 
