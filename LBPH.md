@@ -102,3 +102,66 @@ print("얼굴 샘플 수집이 끝났습니다.")
 기록된 사진들은 result_screenshot/faces/(name)_(id) 폴더 경로에 저장됩니다.
 
 ---
+
+### 📷 #2 Python Code (4_lbp_face2_train.py)
+
+1. Now, take the photos that were recorded and train them using LBPH algorithm model.
+
+이제 기록된 사진들을 가져다가 LBPH 알고리즘 모델을 사용하여 모델링 훈련을 합시다.
+
+```python
+import cv2
+import numpy as np
+import os, glob
+
+# 변수 설정 --- ①
+base_dir = '../result_screenshot/faces'
+train_data, train_labels = [], []
+
+
+dirs = [d for d in glob.glob(base_dir+"/*") if os.path.isdir(d)]
+
+print('훈련 데이터셋 수집: ')
+for dir in dirs:
+    # name_id 형식에서 id를 분리 ---②
+    id = dir.split('_')[2]          
+    files = glob.glob(dir+'/*.jpg')
+    print('\t path:%s, %dfiles'%(dir, len(files)))
+    for file in files:
+        img = cv2.imread(file, cv2.IMREAD_GRAYSCALE)
+        # 이미지는 train_data, 아이디는 train_lables에 저장 ---③
+        train_data.append(np.asarray(img, dtype=np.uint8))
+        train_labels.append(int(id))
+
+# NumPy 배열로 변환 ---④
+train_data = np.asarray(train_data)
+train_labels = np.int32(train_labels)
+
+# LBP 얼굴인식기 생성 및 훈련 ---⑤
+print('LBP 모델 훈련 시작...')
+model = cv2.face.LBPHFaceRecognizer_create()
+model.train(train_data, train_labels)
+model.write('../result_screenshot/faces/Byun_face.xml')
+print("모델 훈련 성공!")
+
+```
+
+---
+
+<br>
+
+![Required](result_screenshot/4_1.jpg)
+
+2. When the code is executed, the modeling training will be started with collected dataset.
+
+코드가 실행되면, 수집된 데이터셋을 가지고 모델링 훈련이 시작될 것입니다.
+
+<br><br>
+
+![Required](result_screenshot/4_2.jpg)
+
+3. Once the training is complete, the result will be saved in the faces folder.
+
+훈련이 끝나면, faces 폴더에 결과가 저장될 것입니다.
+
+---
