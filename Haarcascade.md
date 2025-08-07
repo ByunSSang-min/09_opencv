@@ -35,7 +35,7 @@ cv2.destroyAllWindows()
 
 ---
 
-<br>
+<br><br>
 
 ![Required](result_screenshot/1_1.jpg)
 
@@ -43,7 +43,7 @@ cv2.destroyAllWindows()
 
 얼굴과 눈을 검출하기 위해선, 이 캐스케이드 분류기가 필요합니다. 그것들을 data 폴더 안에 넣으세요.
 
-<br>
+<br><br>
 
 ![Result](result_screenshot/1.jpg)
 
@@ -54,5 +54,5 @@ will be detected with green outlines.
 
 ---
 
-<br>
+<br><br>
 
