@@ -6,15 +6,15 @@
 
 1. First, prepare the cascade classifier files in data folder.
 
-먼저, 캐스케이드 분류기 파일을 데이터 폴더에 넣습니다.
+   먼저, 캐스케이드 분류기 파일을 데이터 폴더에 넣습니다.
 
 <br>
 
 2. haar_utils.py -> A code for importing contains various utilities like distinguishing genders  
-6_project01.py -> Main code that should be executed
+   6_project01.py -> Main code that should be executed
 
-haar_utils.py -> 성별 구분 등의 여러 기능이 포함된 임포팅용 코드
-6_project01.py -> 실행시켜야 하는 메인 코드
+   haar_utils.py -> 성별 구분 등의 여러 기능이 포함된 임포팅용 코드  
+   6_project01.py -> 실행시켜야 하는 메인 코드
 
 ```python
 # haar_utils.py
@@ -209,6 +209,6 @@ cv2.destroyAllWindows()
 
 3. According to masking of hair and lip, it determines the gender of person in image.
 
-머리카락 부분과 입술 부분의 마스킹에 따라 사진 속 인물의 성별을 결정합니다.
+   머리카락 부분과 입술 부분의 마스킹에 따라 사진 속 인물의 성별을 결정합니다.
 
 <br>
