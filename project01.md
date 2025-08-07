@@ -1,6 +1,6 @@
 ## 🟩 Personal project using cascade classifier
 
-### 📷 #1 Python Code (haar_utils.py, 6_project01.py)
+### 📷 # Python Code (haar_utils.py, 6_project01.py)
 
 ![Required](result_screenshot/6_0.jpg)
 
